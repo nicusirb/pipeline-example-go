@@ -14,7 +14,9 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: example-helloserver:test
+      tag: test/example-helloserver:test
+      pushRemote: true
+      registry: olbank.advahoo.ro:4443
 - name: Deploy
   steps:
   - applyYamlConfig:
