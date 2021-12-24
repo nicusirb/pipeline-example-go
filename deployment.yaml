@@ -27,10 +27,10 @@ spec:
       labels:
         app: helloserver
     spec:
-      imagePullSecrets:
-      - name: pipeline-docker-registry
+     #imagePullSecrets:
+     #- name: pipeline-docker-registry
       containers:
       - name: helloserver
-        image: ${CICD_IMAGE}:${CICD_EXECUTION_SEQUENCE}
+        image: example-helloserver:test
         ports:
         - containerPort: 80
