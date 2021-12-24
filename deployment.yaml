@@ -27,10 +27,10 @@ spec:
       labels:
         app: helloserver
     spec:
-     #imagePullSecrets:
-     #- name: pipeline-docker-registry
+     imagePullSecrets:
+     - name: olbank
       containers:
       - name: helloserver
-        image: example-helloserver:test
+        image: olbank.advahoo.ro:4443/test/example-helloserver:test
         ports:
         - containerPort: 80
